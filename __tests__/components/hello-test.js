@@ -11,12 +11,11 @@ describe('<Hello />', () => {
   test('snapshot of Hello', () => {
     testHello = renderer.create(<Hello />).toJSON();
     expect(testHello).toMatchSnapshot();
-  })
+  });
 
   test('render Hello', () => {
     testHello = shallow(<Hello />);
     expect(testHello.find('h1').text()).toEqual('Hello, world!');
-  })
-
+  });
 
 })
