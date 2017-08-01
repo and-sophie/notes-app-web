@@ -1,0 +1,19 @@
+{
+  "name": "notes-app-web",
+  "version": "1.0.0",
+  "description": "A small react-redux app for adding notes",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/and-sophie/notes-app-web.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/and-sophie/notes-app-web/issues"
+  },
+  "homepage": "https://github.com/and-sophie/notes-app-web#readme"
+}
