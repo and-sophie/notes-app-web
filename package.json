@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/and-sophie/notes-app-web/issues"
   },
-  "homepage": "https://github.com/and-sophie/notes-app-web#readme"
+  "homepage": "https://github.com/and-sophie/notes-app-web#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
 }
