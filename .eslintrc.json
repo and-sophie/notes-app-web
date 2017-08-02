@@ -1,49 +1,23 @@
 {
-    "env": {
-        "browser": true,
-        "es6": true,
-        "node": true
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "airbnb"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
     },
-    "extends": [
-        "airbnb"
-      ],
-    "parserOptions": {
-        "ecmaVersion": 6,
-        "ecmaFeatures": {
-            "experimentalObjectRestSpread": true,
-            "jsx": true
-        },
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react",
-        "jsx-a11y",
-        "import"
-    ],
-    "rules": {
-      "no-console": 1,
-      "no-debugger": 1,
-      "no-var": 1,
-      "indent": [
-        "error",
-        2
-      ],
-      "linebreak-style": [
-        "error",
-        "unix"
-      ],
-      "no-trailing-spaces": 1,
-      "eol-last": 1,
-      "no-unused-vars": 1,
-      "no-underscore-dangle": 1,
-      "no-alert": 0,
-      "quotes": [
-        "error",
-        "double"
-      ],
-      "semi": [
-        1,
-        "always"
-      ]
-    }
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import"
+  ]
 }
