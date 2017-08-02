@@ -1,29 +1,40 @@
-var webpack = require('webpack');
-var path = require('path');
+const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-var BUILD_DIR = path.resolve(__dirname, 'build');
-var APP_DIR = path.resolve(__dirname, 'src');
+const BUILD_DIR = path.resolve(__dirname, 'build');
+const APP_DIR = path.resolve(__dirname, 'src');
 
-var config = {
-  entry: APP_DIR + '/index.jsx',
+const config = {
+  entry: {
+    bundle: `${APP_DIR}/index.jsx`,
+  },
   output: {
     path: BUILD_DIR,
-    filename: 'bundle.js'
+    filename: '[name].js',
   },
 
-  module : {
-   loaders : [
-     {
-       test : /\.jsx?/,
-       include : APP_DIR,
-       loader : 'babel-loader'
-     }
-   ],
- },
+  module: {
+    loaders: [
+      {
+        test: /\.jsx?/,
+        include: APP_DIR,
+        loader: 'babel-loader',
+      },
+    ],
+  },
 
- resolve: {
-   extensions: [".js", ".jsx"]
- }
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
+
+  plugins: [
+    new CopyWebpackPlugin([
+      {
+        from: './index.html',
+        to: './index.html',
+      },
+    ]),
+  ],
 
 };
 
