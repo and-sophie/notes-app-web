@@ -6,8 +6,11 @@
   "scripts": {
     "test": "jest",
     "update-snapshot": "jest --updateSnapshot",
-    "lint": "eslint . --ext jsx js",
-    "build": "webpack"
+    "lint": "esw src --ext jsx js",
+    "clean": "rm -rf ./build",
+    "build": "npm run clean && webpack",
+    "start": "node server.js &",
+    "dev": "NODE_ENV=development npm run clean && npm run start && webpack -d --watch"
   },
   "repository": {
     "type": "git",
@@ -22,7 +25,8 @@
   "dependencies": {
     "express": "^4.15.3",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "styled-components": "^2.1.1"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
@@ -39,6 +43,7 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^5.x",
     "eslint-plugin-react": "^7.1.0",
+    "eslint-watch": "^3.1.2",
     "file-loader": "^0.11.2",
     "jest": "^20.0.4",
     "react-test-renderer": "^15.6.1",

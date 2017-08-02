@@ -1,5 +1,6 @@
 import React from 'react';
+import Heading from './common/Text';
 
 export default () => (
-  <h1>Hello, world!</h1>
+  <Heading>Hello, world!</Heading>
 );
