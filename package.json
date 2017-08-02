@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "update-snapshot": "jest --updateSnapshot",
-    "lint": "eslint ./src",
+    "lint": "eslint src --ext jsx js",
     "build": "webpack"
   },
   "repository": {
@@ -34,9 +34,7 @@
     "babel-register": "^6.24.1",
     "enzyme": "^2.9.1",
     "eslint": "^4.3.0",
-    "eslint-config-airbnb": "^15.1.0",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-loader": "^1.9.0",
     "eslint-plugin-react": "^7.1.0",
     "jest": "^20.0.4",
     "react-test-renderer": "^15.6.1",
