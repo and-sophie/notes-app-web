@@ -15,5 +15,5 @@ app.use('/*', express.static(__dirname + '/build/index.html'));
 
 app.listen(8080, function (error) {
   if (error) throw (error);
-  console.info('Server started on 8080');
+  console.info('Server started on 8080 💫  💥');
 })
